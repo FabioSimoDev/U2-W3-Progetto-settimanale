@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary px-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="assets/images/ideogram-PhotoRoom.png-PhotoRoom.svg"
+              width="50px"
+              height="50px"
+              alt="logo"
+          /></a>
+          <div class="d-flex align-items-center order-lg-3 gap-3">
+            <span class="navbar-text ms-auto cart-icon">
+              <a href="cart.html">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-cart3"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+              </a>
+            </span>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cart.html">Carrello</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Scopri di più</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="py-5">
+      <div class="container py-5">
+        <form id="form">
+          <legend class="text-center">Create Game</legend>
+          <a
+            href="#"
+            class="text-center d-block text-decoration-none"
+            onclick="passToModify()"
+            >vuoi modificare? cliccami</a
+          >
+          <div class="mb-3 game-id-container">
+            <label for="game-id" class="form-label" disabled="true"
+              >Game ID</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="game-id"
+              placeholder="ID del gioco da modificare"
+              disabled=""
+            />
+          </div>
+          <div class="mb-3">
+            <label for="game-title" class="form-label">Game Title</label>
+            <input type="text" class="form-control" id="game-title" />
+          </div>
+          <div class="mb-3">
+            <label for="game-description" class="form-label"
+              >Game Description</label
+            >
+            <textarea
+              type="text"
+              class="form-control"
+              id="game-description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="game-image" class="form-label">Game Image (url)</label>
+            <input type="text" class="form-control" id="game-image" />
+          </div>
+          <div class="mb-3">
+            <label for="game-brand" class="form-label">Game Brand</label>
+            <input type="text" class="form-control" id="game-brand" />
+          </div>
+          <div class="mb-3">
+            <label for="game-price" class="form-label">Game price</label>
+            <input type="text" class="form-control" id="game-price" />
+          </div>
+          <div class="mb-3">
+            <label for="game-stars" class="form-label"
+              >Review Stars (min: 1; max: 5)
+            </label>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="game-stars"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary submit-btn">
+            Create/modify
+          </button>
+          <button type="button" class="btn btn-danger" onclick="remove()">
+            Remove
+          </button>
+          <a href="" class="btn btn-outline-primary">Reset form</a>
+        </form>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="backOffice.js"></script>
+  </body>
+</html>
