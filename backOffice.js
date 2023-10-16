@@ -14,7 +14,7 @@ let methodToUse = "POST";
 const nameInput = document.getElementById("game-title");
 const descriptionInput = document.getElementById("game-description");
 const priceInput = document.getElementById("game-price");
-const starsInput = document.getElementById("game-stars");
+// const starsInput = document.getElementById("game-stars");
 const brandInput = document.getElementById("game-brand");
 const imageInput = document.getElementById("game-image");
 
